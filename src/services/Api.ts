@@ -156,7 +156,13 @@ const useEndpoint = (onError: (message: string) => void) => {
         }
     }
 
-    return [call, response, onLoad, isSuccess] as const;
+    const reset = () => {
+        setResponse(null);
+        setSuccess(false);
+        setOnLoad(false);
+    }
+
+    return [call, response, onLoad, isSuccess, reset] as const;
 }
 
 export { useLogin, useSignUp, useEndpoint, ApiInstance as Api };

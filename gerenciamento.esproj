@@ -16,4 +16,9 @@
     <Folder Include="src\Types\" />
     <Folder Include="src\services\" />
   </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties package_1json__JsonSchema="" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

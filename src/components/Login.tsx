@@ -40,7 +40,7 @@ function Login() {
         if (isLogged) {
             navigate("/home");
         }
-    }, [isLogged]);
+    }, [isLogged, navigate]);
 
     return (
         <MDBContainer className='h-100' fluid>

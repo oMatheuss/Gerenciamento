@@ -19,7 +19,7 @@ function SignUp() {
         if (isSuccess) {
             navigate("/");
         }
-    }, [isSuccess]);
+    }, [isSuccess, navigate]);
 
     const onRegister = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();

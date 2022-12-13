@@ -5,7 +5,7 @@ import { User } from '../Types/ApiTypes';
 import CanvasJSReact from '../lib/canvasjs.react';
 import { useEffect, useState } from 'react';
 import { Api } from '../services/Api';
-var CanvasJS = CanvasJSReact.CanvasJS;
+//var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 const getOptions = (onGoing: number, finished: number, interrupted: number) => {

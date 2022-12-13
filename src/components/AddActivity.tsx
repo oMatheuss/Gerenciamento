@@ -15,7 +15,7 @@ function AddActivity(props: AddActivityProps) {
     const onError = (msg: string) => {
         setError(msg);
     }
-    const [call, , onLoad, isSuccess] = useEndpoint(onError);
+    const [call, , onLoad, isSuccess, reset] = useEndpoint(onError);
 
     const onAdd = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -31,8 +31,10 @@ function AddActivity(props: AddActivityProps) {
     useEffect(() => {
         if (isSuccess) {
             props.close();
+            reset();
+            setError("");
         }
-    }, [isSuccess, props]);
+    }, [isSuccess, props, reset]);
 
     return (
         <MDBModal onSubmit={onAdd} tag='form' show={props.isOpen} setShow={props.setShow} tabIndex='-1'>

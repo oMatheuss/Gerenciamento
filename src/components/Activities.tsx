@@ -7,14 +7,6 @@ import ActivityUsers from './ActivityUsers';
 import AddActivity from './AddActivity';
 import AddUserToActivity from './AddUserToActivity';
 
-const status = (s: number) => {
-    switch (s) {
-        case 0: return "Em execução";
-        case 1: return "Terminado";
-        case 2: return "Interrompido";
-    }
-}
-
 const date = (d: string) => {
     if (d.slice(0, 4) === "0001") return "Não Finalizada";
     return new Date(d).toLocaleString();
